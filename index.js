@@ -1,0 +1,23 @@
+const express = require('express');
+const app = express();
+const config = require('config');
+const mongoose = require('mongoose');
+
+const PORT = config.get('port') || 5000;
+
+async function start(){
+    try {
+        await mongoose.connect(config.get('mongoURI'),{
+
+        })
+    }
+    catch (e){
+        console.log('Server error', e.message);
+        process.exit(1);
+    }
+}
+start();
+
+app.listen(PORT, ()=>{
+    console.log(`App has been started at port ${PORT}`);
+})

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index",
+    "dev": "nodemon index"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/SOLAR8888/myTODO/issues"
   },
-  "homepage": "https://github.com/SOLAR8888/myTODO#readme"
+  "homepage": "https://github.com/SOLAR8888/myTODO#readme",
+  "dependencies": {
+    "@types/mongoose": "^5.11.97",
+    "concurrently": "^6.2.0",
+    "config": "^3.3.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.5",
+    "nodemon": "^2.0.12"
+  }
 }

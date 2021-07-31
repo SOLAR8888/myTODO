@@ -1,0 +1,4 @@
+{
+  "port": 5000,
+  "mongoURI": "mongodb+srv://solar:sol@rveg@@cluster0.lszlc.mongodb.net/todos?retryWrites=true&w=majority"
+}
