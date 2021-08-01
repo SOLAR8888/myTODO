@@ -5,6 +5,7 @@ import {Home} from "./pages/Home";
 import {Alert} from "./components/Alert";
 import {AlertState} from "./context/alert/AlertState";
 import {useRoutes} from "./routes";
+import {Toast} from "./components/Toast";
 
 function App() {
     const routes = useRoutes(false);
@@ -14,9 +15,7 @@ function App() {
             <Navbar/>
             <div className="container pt-4">
                 <Alert/>
-                {/*<Switch>
-                    <Route path={'/'} exact component={Home}/>
-                </Switch>*/}
+
                 {routes}
             </div>
         </BrowserRouter>
