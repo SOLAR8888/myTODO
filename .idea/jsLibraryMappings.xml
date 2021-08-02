@@ -3,7 +3,6 @@
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{myTODO/node_modules}" />
     <file url="file://$PROJECT_DIR$/node_modules/mongoose" libraries="{myTODO/node_modules}" />
-    <file url="PROJECT" libraries="{@types/bcryptjs, @types/config, @types/mongoose}" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>

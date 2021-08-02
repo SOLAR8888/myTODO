@@ -1,14 +1,17 @@
 import React, {useState, useContext} from 'react';
 import {AlertContext} from "../context/alert/alertContext";
+import {APIContext} from "../context/api/apiContext";
 
 export const InputForm = ()=>{
     const [value, setValue] = useState('');
     const alert = useContext(AlertContext);
+    const {addNote} = useContext(APIContext);
 
     const submitHandler = event => {
         event.preventDefault();
         if (value.trim()){
             //создать заметку
+            addNote(value);
             alert.show('Заметка создана', 'success');
             setValue('')
         }

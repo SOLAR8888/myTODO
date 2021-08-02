@@ -29,7 +29,7 @@ router.post('/register',
           return res.status(400).json({message:'Такой пользователь уже существует'});
       }
 
-      const hashedPassword = await bcrypt.hash(password,8888);
+      const hashedPassword = await bcrypt.hash(password,8);
       const user = new User({email,password:hashedPassword});
       await user.save();
 
@@ -74,7 +74,7 @@ router.post('/login',
                     userId:user.id
                 },
                 process.env.SECRET,
-                {expiresIn: '60s'}
+                {expiresIn: '365d'}
                 )
 
             res.json({token, userId:user.id})

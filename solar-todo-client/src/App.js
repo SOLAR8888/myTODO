@@ -1,25 +1,35 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 import {Navbar} from './components/Navbar'
-import {Home} from "./pages/Home";
 import {Alert} from "./components/Alert";
 import {AlertState} from "./context/alert/AlertState";
 import {useRoutes} from "./routes";
-import {Toast} from "./components/Toast";
+import 'materialize-css';
+import {useAuth} from "./hooks/auth.hook";
+import {AuthContext} from "./context/AuthContext";
+import {APIState} from "./context/api/APIState";
+
+
 
 function App() {
-    const routes = useRoutes(false);
+    const {token, login, logout, userId} = useAuth();
+    const isAuthenticated = !!token;
+    const routes = useRoutes(isAuthenticated);
   return (
-      <AlertState>
-        <BrowserRouter>
-            <Navbar/>
-            <div className="container pt-4">
-                <Alert/>
+      <AuthContext.Provider value={{token, userId, login, logout, isAuthenticated}}>
+          <APIState>
+              <AlertState>
+                <BrowserRouter>
+                    <Navbar/>
+                    <div className="container pt-4">
+                        <Alert/>
 
-                {routes}
-            </div>
-        </BrowserRouter>
-      </AlertState>
+                        {routes}
+                    </div>
+                </BrowserRouter>
+              </AlertState>
+          </APIState>
+      </AuthContext.Provider>
   );
 }
 

@@ -27,3 +27,15 @@ code {
     margin-right: 1rem;
   }
 }
+
+#toast-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.toast{
+  text-align: center;
+}

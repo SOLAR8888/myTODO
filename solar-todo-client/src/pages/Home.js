@@ -1,12 +1,15 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useContext, useEffect} from 'react';
 import {InputForm} from "../components/InputForm";
 import {Notes} from "../components/Notes";
+import {APIContext} from "../context/api/apiContext";
 
 export const Home = () => {
-    //для теста
-    const notes = new Array(3)
-        .fill('')
-        .map((v,i)=>({ id:i, title:`Item #${i+1}`}));
+
+    const {loading, notes, fetchNotes} = useContext(APIContext);
+
+    useEffect(()=>{
+        fetchNotes();
+    }, [])
 
     return (
         <Fragment>

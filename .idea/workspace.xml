@@ -20,18 +20,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d492f935-f857-4575-bc4f-10d6759dedb4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/auth.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solar-todo-client/src/pages/AuthPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solar-todo-client/src/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/auth.middleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/Note.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/notes.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solar-todo-client/src/context/AuthContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solar-todo-client/src/context/api/APIState.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solar-todo-client/src/context/api/apiContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solar-todo-client/src/context/api/apiReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/solar-todo-client/src/hooks/auth.hook.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/myTODO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myTODO.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/default.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/components/Alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/components/Alert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/components/InputForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/components/InputForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/components/Notes.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/components/Notes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/context/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/context/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/hooks/http.hook.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/hooks/http.hook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/hooks/message.hook.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/hooks/message.hook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/pages/AuthPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/pages/AuthPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/yarn.lock" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,13 +83,26 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="15.6.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.13.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="15.6.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/solar-todo-client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="npm.server">
     <configuration name="client" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -88,14 +123,39 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="server" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.server" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.client" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d492f935-f857-4575-bc4f-10d6759dedb4" name="Default Changelist" comment="" />
@@ -104,18 +164,22 @@
       <option name="presentableId" value="Default" />
       <updated>1627740803268</updated>
       <workItem from="1627740804357" duration="10433000" />
+      <workItem from="1627886948461" duration="2404000" />
+      <workItem from="1627898958270" duration="10782000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
