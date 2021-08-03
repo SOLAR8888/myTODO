@@ -1,11 +1,10 @@
-import React, {useContext, useReducer} from "react";
+import React, { useContext, useReducer } from "react";
 import {APIContext} from "./apiContext";
 import {apiReducer} from "./apiReducer";
 import axios from "axios";
 import {ADD_NOTE, FETCH_NOTES, REMOVE_NOTE, SHOW_LOADER, UPDATE_NOTE} from "../types";
-
-import {useAuth} from "../../hooks/auth.hook";
 import {AlertContext} from "../alert/alertContext";
+
 
 const baseUrl = process.env.API_BASE || 'http://localhost:5000';
 
@@ -14,12 +13,6 @@ export const APIState = ({children}) =>{
         notes:[],
         loading:false
     }
-    const {token} = useAuth();
-    const config = {
-        headers: {
-            'Authorization': 'Bearer ' + token
-        }
-    }
 
     const alert = useContext(AlertContext);
 
@@ -27,8 +20,13 @@ export const APIState = ({children}) =>{
 
     const showLoader = () => dispatch({type:SHOW_LOADER});
 
-    const fetchNotes = async () => {
+    const fetchNotes = async (token) => {
         showLoader();
+        const config = {
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        }
         const res = await axios.get(`${baseUrl}/api/note/`, config);
 
         const payload = Object.keys(res.data).map(key => {
@@ -44,9 +42,14 @@ export const APIState = ({children}) =>{
         })
     }
 
-    const addNote = async text => {
+    const addNote = async (text, token) => {
         const note = {
             text
+        }
+        const config = {
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
         }
         try{
             const res = await axios.post(`${baseUrl}/api/note/add`, note, config)
@@ -65,9 +68,14 @@ export const APIState = ({children}) =>{
 
     }
 
-    const removeNote = async id => {
+    const removeNote = async (id, token) => {
         const note = {
             id
+        }
+        const config = {
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
         }
         const res = await axios.post(`${baseUrl}/api/note/remove`, note, config)
 
@@ -75,10 +83,15 @@ export const APIState = ({children}) =>{
         dispatch({type: REMOVE_NOTE, payload: id})
     }
 
-    const updateNote = async (id, flag) => {
+    const updateNote = async (id, flag, token) => {
         const note = {
             id,
             done:flag
+        }
+        const config = {
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
         }
         const res = await axios.post(`${baseUrl}/api/note/update`, note, config)
 

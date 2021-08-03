@@ -1,10 +1,12 @@
 import React, {useContext} from 'react';
 import {APIContext} from "../context/api/apiContext";
+import {AuthContext} from "../context/AuthContext";
 
 export const Notes = ({notes}) => {
 
     const {removeNote, updateNote} = useContext(APIContext);
 
+    const {token} = useContext(AuthContext);
 
     return (
         <ul className='list-group'>
@@ -18,8 +20,8 @@ export const Notes = ({notes}) => {
                     </div>
 
                     <div className='buttons'>
-                        <button onClick={() => updateNote(note._id, !note.done)} type="button" className={note.done ? "btn btn-success btn-sm mx-1" : "btn btn-outline-success btn-sm mx-1"}>&#128504;</button>
-                        <button onClick={() => removeNote(note._id)} type="button" className="btn btn-outline-danger btn-sm mx-1">&times;</button>
+                        <button onClick={() => updateNote(note._id, !note.done, token)} type="button" className={note.done ? "btn btn-success btn-sm mx-1" : "btn btn-outline-success btn-sm mx-1"}>&#128504;</button>
+                        <button onClick={() => removeNote(note._id, token)} type="button" className="btn btn-outline-danger btn-sm mx-1">&times;</button>
                     </div>
 
                 </li>
