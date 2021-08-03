@@ -8,9 +8,21 @@ export const Notes = ({notes}) => {
 
     const {token} = useContext(AuthContext);
 
+    const filter = 0;//TODO
+
     return (
         <ul className='list-group'>
-            {notes.map((note)=>(
+            {notes.filter(note => {
+                switch (filter){
+                    case 0:
+                        return true;
+                    case 1:
+                        return note.done;
+                    case 2:
+                        return !note.done;
+                }
+                return true;
+            }).map((note)=>(
                 <li
                     className='list-group-item note'
                     key = {note.id}>
