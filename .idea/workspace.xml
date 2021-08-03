@@ -20,38 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d492f935-f857-4575-bc4f-10d6759dedb4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/middleware/auth.middleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/Note.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/notes.routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solar-todo-client/src/context/AuthContext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solar-todo-client/src/context/api/APIState.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solar-todo-client/src/context/api/apiContext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solar-todo-client/src/context/api/apiReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/solar-todo-client/src/hooks/auth.hook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/myTODO.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/myTODO.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/default.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/default.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/auth.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solar-todo-client/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solar-todo-client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/notes.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/notes.routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solar-todo-client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/components/Alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/components/Alert.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solar-todo-client/src/components/InputForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/components/InputForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/components/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solar-todo-client/src/components/Notes.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/components/Notes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/context/api/APIState.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/context/api/APIState.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/context/api/apiReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/context/api/apiReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solar-todo-client/src/context/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/context/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/hooks/http.hook.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/hooks/http.hook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/hooks/message.hook.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/hooks/message.hook.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solar-todo-client/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/pages/AuthPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/pages/AuthPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solar-todo-client/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/pages/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solar-todo-client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +143,7 @@
       <updated>1627740803268</updated>
       <workItem from="1627740804357" duration="10433000" />
       <workItem from="1627886948461" duration="2404000" />
-      <workItem from="1627898958270" duration="10782000" />
+      <workItem from="1627898958270" duration="16288000" />
     </task>
     <servers />
   </component>

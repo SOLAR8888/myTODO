@@ -1,10 +1,11 @@
-import React, {useReducer} from "react";
+import React, {useContext, useReducer} from "react";
 import {APIContext} from "./apiContext";
 import {apiReducer} from "./apiReducer";
 import axios from "axios";
-import {ADD_NOTE, FETCH_NOTES, REMOVE_NOTE, SHOW_LOADER} from "../types";
+import {ADD_NOTE, FETCH_NOTES, REMOVE_NOTE, SHOW_LOADER, UPDATE_NOTE} from "../types";
 
 import {useAuth} from "../../hooks/auth.hook";
+import {AlertContext} from "../alert/alertContext";
 
 const baseUrl = process.env.API_BASE || 'http://localhost:5000';
 
@@ -20,6 +21,8 @@ export const APIState = ({children}) =>{
         }
     }
 
+    const alert = useContext(AlertContext);
+
     const [state, dispatch] = useReducer(apiReducer, initialState);
 
     const showLoader = () => dispatch({type:SHOW_LOADER});
@@ -34,7 +37,7 @@ export const APIState = ({children}) =>{
                 id:key
             }
         })
-        console.log('payload',payload)
+
         dispatch({
             type:FETCH_NOTES,
             payload
@@ -49,9 +52,10 @@ export const APIState = ({children}) =>{
             const res = await axios.post(`${baseUrl}/api/note/add`, note, config)
 
             const payload = {
-                ...note,
-                id:res.data._id
+                ...res.data.note,
+                id:res.data.note._id
             }
+            if (res.status === 200) alert.show('Заметка создана', 'success');
 
             dispatch({type:ADD_NOTE, payload})
         }
@@ -65,14 +69,26 @@ export const APIState = ({children}) =>{
         const note = {
             id
         }
-        await axios.post(`${baseUrl}/api/note/remove`, note, config)
+        const res = await axios.post(`${baseUrl}/api/note/remove`, note, config)
 
+        if (res.status === 200) alert.show('Заметка удалена', 'warning');
         dispatch({type: REMOVE_NOTE, payload: id})
+    }
+
+    const updateNote = async (id, flag) => {
+        const note = {
+            id,
+            done:flag
+        }
+        const res = await axios.post(`${baseUrl}/api/note/update`, note, config)
+
+        if (res.status === 200) alert.show('Заметка обновлена', 'success');
+        dispatch({type:UPDATE_NOTE, payload:{id, flag}})
     }
 
     return (
         <APIContext.Provider value={{
-           showLoader,  addNote, removeNote, fetchNotes,
+           showLoader,  addNote, removeNote, fetchNotes, updateNote,
             loading: state.loading,
             notes: state.notes
         }}>

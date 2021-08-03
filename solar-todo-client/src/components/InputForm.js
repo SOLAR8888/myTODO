@@ -12,7 +12,7 @@ export const InputForm = ()=>{
         if (value.trim()){
             //создать заметку
             addNote(value);
-            alert.show('Заметка создана', 'success');
+
             setValue('')
         }
         else {
@@ -22,16 +22,22 @@ export const InputForm = ()=>{
     }
 
     return (
-        <form onSubmit={submitHandler}>
+        <form onSubmit={submitHandler} className='form-inline'>
             <div className='form-group'>
-                <input
-                    type='text'
-                    className='form-control'
-                    placeholder='Введите текст заметки'
-                    value={value}
-                    onChange={event => {setValue(event.target.value)}}
-                />
+                <div class="input-group">
+                    <input
+                        type='text'
+                        className='form-control'
+                        placeholder='Введите текст заметки'
+                        value={value}
+                        onChange={event => {setValue(event.target.value)}}
+                    />
+                    <div className="input-group-append">
+                        <button type="submit" className="btn btn-outline-secondary">Добавить</button>
+                    </div>
+                </div>
             </div>
+
         </form>
         )
 }
