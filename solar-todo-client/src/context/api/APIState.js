@@ -27,7 +27,7 @@ export const APIState = ({children}) =>{
                 'Authorization': 'Bearer ' + token
             }
         }
-        const res = await axios.get(`${baseUrl}/api/note/`, config);
+        const res = await axios.get(`/api/note/`, config);
 
         const payload = Object.keys(res.data).map(key => {
             return {
@@ -52,7 +52,7 @@ export const APIState = ({children}) =>{
             }
         }
         try{
-            const res = await axios.post(`${baseUrl}/api/note/add`, note, config)
+            const res = await axios.post(`/api/note/add`, note, config)
 
             const payload = {
                 ...res.data.note,
@@ -77,7 +77,7 @@ export const APIState = ({children}) =>{
                 'Authorization': 'Bearer ' + token
             }
         }
-        const res = await axios.post(`${baseUrl}/api/note/remove`, note, config)
+        const res = await axios.post(`/api/note/remove`, note, config)
 
         if (res.status === 200) alert.show('Заметка удалена', 'warning');
         dispatch({type: REMOVE_NOTE, payload: id})
@@ -93,7 +93,7 @@ export const APIState = ({children}) =>{
                 'Authorization': 'Bearer ' + token
             }
         }
-        const res = await axios.post(`${baseUrl}/api/note/update`, note, config)
+        const res = await axios.post(`/api/note/update`, note, config)
 
         if (res.status === 200) alert.show('Заметка обновлена', 'success');
         dispatch({type:UPDATE_NOTE, payload:{id, flag}})
