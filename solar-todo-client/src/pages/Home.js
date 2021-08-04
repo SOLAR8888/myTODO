@@ -1,4 +1,4 @@
-import React, {Fragment, useContext, useEffect} from 'react';
+import React, {Fragment, useContext, useEffect, useState} from 'react';
 import {InputForm} from "../components/InputForm";
 import {Notes} from "../components/Notes";
 import {APIContext} from "../context/api/apiContext";
@@ -11,6 +11,8 @@ export const Home = () => {
     const {loading, notes, fetchNotes} = useContext(APIContext);
     const {token} = useContext(AuthContext);
 
+    const [filter, setFilter] = useState(0);
+
     useEffect(()=>{
         fetchNotes(token);
 
@@ -20,8 +22,8 @@ export const Home = () => {
         <Fragment>
             <InputForm/>
             <hr/>
-            <Filter/>
-            <Notes notes={notes}/>
+            <Filter filter={filter} setFilter={setFilter}/>
+            <Notes notes={notes} filter={filter} />
         </Fragment>
     )
 }

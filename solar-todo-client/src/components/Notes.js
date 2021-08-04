@@ -2,13 +2,12 @@ import React, {useContext} from 'react';
 import {APIContext} from "../context/api/apiContext";
 import {AuthContext} from "../context/AuthContext";
 
-export const Notes = ({notes}) => {
+export const Notes = ({notes, filter}) => {
 
     const {removeNote, updateNote} = useContext(APIContext);
 
     const {token} = useContext(AuthContext);
 
-    const filter = 0;//TODO
 
     return (
         <ul className='list-group'>

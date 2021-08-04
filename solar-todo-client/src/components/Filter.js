@@ -1,9 +1,6 @@
-import React, {useState} from "react";
+import React from "react";
 
-export const Filter = () => {
-
-    const [filter, setFilter] = useState(0);
-
+export const Filter = ({filter, setFilter}) => {
 
     return (
         <div className='filter'>
