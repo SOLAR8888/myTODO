@@ -26,7 +26,7 @@ export const Notes = ({notes, filter}) => {
                     className='list-group-item note'
                     key = {note.id}>
                     <div className='note-text'>
-                        <strong> {note.text} </strong>
+                        <strong style={note.done ? {textDecoration:'line-through'} : {}}> {note.text} </strong>
                         <div className='text-info text-sm-start'>{new Date(note.createdAt).toLocaleString()}</div>
                     </div>
 

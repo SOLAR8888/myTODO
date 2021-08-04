@@ -20,9 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d492f935-f857-4575-bc4f-10d6759dedb4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/components/Filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/components/Filter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/solar-todo-client/src/components/Notes.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/components/Notes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/pages/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/pages/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/pages/AuthPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/pages/AuthPage.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +137,7 @@
       <updated>1627740803268</updated>
       <workItem from="1627740804357" duration="10433000" />
       <workItem from="1627886948461" duration="2404000" />
-      <workItem from="1627898958270" duration="16866000" />
+      <workItem from="1627898958270" duration="18274000" />
     </task>
     <servers />
   </component>

@@ -23,7 +23,7 @@ function App() {
                             <Navbar/>
                             <div className="container pt-4">
                                 <Alert/>
-                                    {routes}
+                                {routes}
                             </div>
                         </BrowserRouter>
                   </APIState>

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react'
+import React, {useContext, useEffect, useState, Fragment} from 'react'
 import {useHttp} from "../hooks/http.hook";
 import {useMessage} from "../hooks/message.hook";
 import {AuthContext} from "../context/AuthContext";
@@ -45,7 +45,7 @@ export const AuthPage = () =>{
 
 
     return (
-        <div>
+        <Fragment>
             <div className="card">
                 <h5 className="card-header">Авторизация</h5>
                 <div className="card-body">
@@ -64,6 +64,6 @@ export const AuthPage = () =>{
                     <button  onClick={registerHandler} disabled={loading} className="btn btn-outline-primary">Зарегистрироваться</button>
                 </div>
             </div>
-        </div>
+        </Fragment>
     )
 }
