@@ -33,7 +33,16 @@ router.post('/register',
       const user = new User({email,password:hashedPassword});
       await user.save();
 
-      res.status(201).json({message:'Пользователь создан'})
+        const token = jwt.sign(
+            {
+                userId:user.id
+            },
+            process.env.SECRET,
+            {expiresIn: '365d'}
+        )
+
+        res.status(201).json({token, userId:user.id})
+      //res.status(201).json({message:'Пользователь создан'})
 
     }
     catch (e){

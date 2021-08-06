@@ -36,6 +36,9 @@ export const AuthPage = () =>{
                 return;
             }
             const  data = await request('/api/auth/register','POST', {...form});
+            if (data.token){
+                auth.login(data.token, data.userId);
+            }
             message(data.message);
         }
         catch (e){
