@@ -7,6 +7,9 @@ export const AlertState = ({children}) =>{
     const [state, dispatch] = useReducer(alertReducer, {visible: false});
 
     const show = (text, type = 'warning') => {
+        //убрал алерт
+        return;
+
         dispatch({
             type: SHOW_ALERT,
             payload: {text, type}
