@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d492f935-f857-4575-bc4f-10d6759dedb4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/routes/auth.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solar-todo-client/src/pages/AuthPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/solar-todo-client/src/pages/AuthPage.js" afterDir="false" />
-    </list>
+    <list default="true" id="d492f935-f857-4575-bc4f-10d6759dedb4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +133,7 @@
       <workItem from="1627740804357" duration="10433000" />
       <workItem from="1627886948461" duration="2404000" />
       <workItem from="1627898958270" duration="29319000" />
-      <workItem from="1628254771921" duration="278000" />
+      <workItem from="1628254771921" duration="559000" />
     </task>
     <servers />
   </component>
@@ -237,5 +234,17 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="184" y="13" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1627759773923" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/auth.routes.js</url>
+          <line>19</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
