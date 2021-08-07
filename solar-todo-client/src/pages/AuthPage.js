@@ -21,8 +21,12 @@ export const AuthPage = () =>{
         clearError();
     }, [error, message, clearError]);
 
-    const isLoginHandler = () => {
+    const isLoginHandler = (l = false) => {
         setLogin(!login);
+        if (!l){
+            document.getElementById('email').value = '';
+            document.getElementById('password').value = '';
+        }
     }
 
     const changeHandler = event => {
@@ -83,13 +87,13 @@ export const AuthPage = () =>{
                     {login &&
                         <div>
                             <button  onClick={loginHandler} disabled={loading} className="btn btn-primary m-1">Войти</button>
-                            <button  onClick={isLoginHandler} disabled={loading} className="btn btn-link m-1">Регистрация</button>
+                            <button  onClick={() => isLoginHandler()} disabled={loading} className="btn btn-link m-1">Регистрация</button>
                         </div>
                     }
                     {!login &&
                         <div>
                             <button  onClick={isLoginHandler} disabled={loading} className="btn btn-link">Войти</button>
-                            <button  onClick={registerHandler} disabled={loading} className="btn btn-primary">Зарегистрироваться</button>
+                            <button  onClick={() => registerHandler(true)} disabled={loading} className="btn btn-primary">Зарегистрироваться</button>
                         </div>
                     }
 
