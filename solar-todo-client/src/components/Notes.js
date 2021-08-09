@@ -50,7 +50,7 @@ export const Notes = ({notes, filter}) => {
                     </div>
 
                     <div className='buttons'>
-                        <button onClick={() => onCheckClick(note._id, !note.done, token)} type="button" className={note.done ? "btn btn-success btn-sm mx-1" : "btn btn-outline-success btn-sm mx-1"}>
+                        <button onClick={() => onCheckClick(note._id, !note.done, token)}  className={note.done ? "btn btn-success btn-sm mx-1" : "btn btn-outline-success btn-sm mx-1"}>
                             {/*&#128504;*/}
 
                             {(!load || loadID !== note._id) &&
