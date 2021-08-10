@@ -27,6 +27,14 @@ export const Notes = ({notes, filter}) => {
         setLoadID('');
     }
 
+    const onRemoveClick = async (id, token) => {
+        setLoad(true);
+        setLoadID(id);
+        await removeNote(id, token);
+        setLoad(false);
+        setLoadID('');
+    }
+
 
     return (
         <ul className='list-group'>
@@ -61,9 +69,14 @@ export const Notes = ({notes, filter}) => {
                             }
 
                         </button>
-                        <button onClick={() => removeNote(note._id, token)} data-bs-toggle="modal" data-bs-target="#modal"  type="button" className="btn btn-outline-danger btn-sm mx-1">
+                        <button onClick={() => onRemoveClick(note._id, token)} data-bs-toggle="modal" data-bs-target="#modal"  type="button" className="btn btn-outline-danger btn-sm mx-1">
                             {/*&times;*/}
+                            {(!load || loadID !== note._id) &&
                             <FontAwesomeIcon className='fa-fw' icon="times" />
+                            }
+                            {load && loadID === note._id &&
+                            <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            }
                         </button>
                     </div>
 
