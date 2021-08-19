@@ -6,6 +6,8 @@ import {Filter} from "../components/Filter";
 
 import {AuthContext} from "../context/AuthContext";
 
+import {DragDropContext} from "react-beautiful-dnd";
+
 export const Home = () => {
 
     const {loading, notes, fetchNotes} = useContext(APIContext);
@@ -18,12 +20,24 @@ export const Home = () => {
 
     }, [])
 
+    const onDragEnd = (result) => {
+        console.log(notes);
+        [notes[result.source.index], notes[result.destination.index]] = [notes[result.destination.index], notes[result.source.index]]
+        console.log(notes);
+    }
+
     return (
         <Fragment>
             <InputForm/>
             <hr/>
             <Filter filter={filter} setFilter={setFilter}/>
-            <Notes notes={notes} filter={filter} />
+            <DragDropContext onDragEnd={onDragEnd}>
+
+                    <Notes notes={notes} filter={filter} />
+
+
+            </DragDropContext>
+
         </Fragment>
     )
 }
