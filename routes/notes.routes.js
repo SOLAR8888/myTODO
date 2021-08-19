@@ -11,7 +11,9 @@ router.post('/add', auth, async (req, res) => {
             return res.status(400).json({message:'Пустой текст заметки'})
         }
 
-        const note = new Note({text, owner: req.user.userId})
+        const allNotes = await Note.find({owner: req.user.userId}) || [];
+        const maxOrder = allNotes.length > 0 ? allNotes.map(user => (user.order)).sort()[allNotes.length - 1] : 0;
+        const note = new Note({text, owner: req.user.userId, order:maxOrder+1})
         await note.save();
 
         res.status(200).json({note});
@@ -26,9 +28,10 @@ router.post('/update',auth, async (req, res) => {
         const id = req.body.id;
         const owner = req.user.userId;
         const done = req.body.done;
+        const order = req.body.order;
 
         const query = {_id:id, owner}
-        await Note.findOneAndUpdate(query, {done});
+        await Note.findOneAndUpdate(query, {done,order});
 
         res.status(200).json({message:'Заметка изменена'})
     }

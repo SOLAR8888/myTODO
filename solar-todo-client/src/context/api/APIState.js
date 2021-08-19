@@ -83,10 +83,11 @@ export const APIState = ({children}) =>{
         dispatch({type: REMOVE_NOTE, payload: id})
     }
 
-    const updateNote = async (id, flag, token) => {
+    const updateNote = async (id, flag, order, token) => {
         const note = {
             id,
-            done:flag
+            done:flag,
+            order
         }
         const config = {
             headers: {
@@ -96,7 +97,7 @@ export const APIState = ({children}) =>{
         const res = await axios.post(`/api/note/update`, note, config)
 
         if (res.status === 200) alert.show('Заметка обновлена', 'success');
-        dispatch({type:UPDATE_NOTE, payload:{id, flag}})
+        dispatch({type:UPDATE_NOTE, payload:{id, flag, order}})
     }
 
     return (

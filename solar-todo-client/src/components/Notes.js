@@ -18,11 +18,11 @@ export const Notes = ({notes, filter}) => {
     const [loadID, setLoadID] = useState('');
     const [load, setLoad] = useState(false);
 
-    const onCheckClick = async (id, done, token) => {
-
+    const onCheckClick = async (note ,token) => {
+        const {_id, done, order} = note;
         setLoad(true);
-        setLoadID(id);
-        await updateNote(id, done, token);
+        setLoadID(_id);
+        await updateNote(_id, !done, order, token);
         setLoad(false);
         setLoadID('');
     }
@@ -44,7 +44,13 @@ export const Notes = ({notes, filter}) => {
                         ref = {provided.innerRef}
                         {...provided.droppableProps}
                     >
-                        {notes.filter(note => {
+                        {notes
+                            .map(note => {
+                                if(!note.order) note.order = 0;
+                                return note
+                            })
+                            .sort((a,b) => (a.order - b.order))
+                            .filter(note => {
                             switch (filter){
                                 case 0:
                                     return true;
@@ -69,7 +75,7 @@ export const Notes = ({notes, filter}) => {
                                         </div>
 
                                         <div className='buttons'>
-                                            <button onClick={() => onCheckClick(note._id, !note.done, token)}  className={note.done ? "btn btn-success btn-sm mx-1" : "btn btn-outline-success btn-sm mx-1"}>
+                                            <button onClick={() => onCheckClick(note, token)}  className={note.done ? "btn btn-success btn-sm mx-1" : "btn btn-outline-success btn-sm mx-1"}>
                                                 {/*&#128504;*/}
 
                                                 {(!load || loadID !== note._id) &&

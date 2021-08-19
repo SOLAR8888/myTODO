@@ -5,7 +5,7 @@ const handlers = {
     [ADD_NOTE]: (state, {payload}) => ({...state, notes: [...state.notes, payload]}),
     [FETCH_NOTES]: (state, {payload}) => ({...state, notes:payload, loading:false}),
     [REMOVE_NOTE]: (state, {payload}) => ({...state, notes: state.notes.filter(note => note._id !== payload)}),
-    [UPDATE_NOTE]: (state, {payload}) => ({...state, notes: state.notes.map((curr)=>{if(curr._id === payload.id) curr.done = payload.flag ;return curr})}),
+    [UPDATE_NOTE]: (state, {payload}) => ({...state, notes: state.notes.map((curr)=>{if(curr._id === payload.id) {curr.done = payload.flag; curr.order = payload.order} ;return curr})}),
     DEFAULT: state => state
 }
 
